@@ -1,0 +1,88 @@
+ body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .register-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url("../image/registerBackground.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .register-form {
+/*      background-color: rgba(255, 255, 255, 0.8);*/
+      border-radius: 5px;
+      padding: 38px 100px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .register-form h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-size: 18px;
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="password"],
+    .form-group input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+	    .form-group input[type="email"] {
+	    	width: 100%;
+	    	padding: 12px;
+	    	border: 1px solid #ccc;
+	    	border-radius: 5px;
+	    }
+    /*.form-group select {
+      width: 104%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+	}*/
+    /*.form-group .section-button {
+      display: inline-block;
+      padding: 14px 46%;
+      background-color: #007bff;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }*/
+
+    .form-group .section-button:hover {
+      background-color: #0056b3;
+    }
+
+    .form-group .login-link {
+      display: block;
+      text-align: center;
+      color: blue;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .form-group .login-link:hover {
+      color: green;
+    }

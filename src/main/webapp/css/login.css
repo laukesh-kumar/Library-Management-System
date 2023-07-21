@@ -1,0 +1,78 @@
+@charset "ISO-8859-1";
+ body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    .login-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-image: url("../image/loginBackground.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .login-form {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      padding: 40px 65px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      max-width: 400px; /* Adjust the value as needed */
+      width: 100%;
+    }
+
+    .login-form h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      font-size: 20px;
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 18px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-group .section-button {
+      display: inline-block;
+      padding: 18px 0;
+      background-color: #007bff;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 110%;
+    }
+
+    .form-group .section-button:hover {
+      background-color: #0056b3;
+    }
+
+    .form-group .register-link,
+    .form-group .forgot-password-link {
+      display: inline-flex;
+      margin-top: 10px ;
+      color: blue;
+    }
+
+    .form-group .register-link:hover,
+    .form-group .forgot-password-link:hover {
+      color: green;
+    }
