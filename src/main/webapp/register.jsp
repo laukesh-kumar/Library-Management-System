@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="wnameth=device-wnameth, initial-scale=1.0">
   <link rel="stylesheet" href="./css/register.css">
+ 
   <title>Register - Library Management System</title>
   <style type="text/css">
   
@@ -13,6 +14,30 @@
 	    	padding: 12px;
 	    	border: 1px solid #ccc;
 	    	border-radius: 5px;
+	    	}
+	    	 .form-group select {
+      width: 104%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+	}
+    .form-group .section-button {
+      display: inline-block;
+      padding: 14px 46%;
+      background-color: #007bff;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-group .section-button:hover {
+      background-color: #0056b3;
+    }
+	    	
   </style>
 </head>
 <body>

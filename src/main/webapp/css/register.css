@@ -1,3 +1,4 @@
+ @charset "ISO-8859-1";
  body {
       background-color: #f2f2f2;
       font-family: Arial, sans-serif;
@@ -52,13 +53,13 @@
 	    	border: 1px solid #ccc;
 	    	border-radius: 5px;
 	    }
-    /*.form-group select {
+    .form-group select {
       width: 104%;
       padding: 12px;
       border: 1px solid #ccc;
       border-radius: 5px;
-	}*/
-    /*.form-group .section-button {
+	}
+    .form-group .section-button {
       display: inline-block;
       padding: 14px 46%;
       background-color: #007bff;
@@ -69,7 +70,7 @@
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-    }*/
+    }
 
     .form-group .section-button:hover {
       background-color: #0056b3;
