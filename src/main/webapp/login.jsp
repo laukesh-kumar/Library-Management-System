@@ -7,6 +7,16 @@
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/login.css">
   <title>Login - Library Management System</title>
+  <style type="text/css">
+  
+  .error-message {
+        color: red;
+        font-size: 18px;
+        margin-bottom: 20px;
+        text-align: center; /* Center-align the error message */
+    }
+    
+    </style>
 
 </head>
 <body>
@@ -20,6 +30,12 @@
   <div class="login-container">
     <form class="login-form" action="LoginController" method="POST">
       <h2>Login</h2>
+      <%-- Check for the presence of the error message and display it --%>
+            <% if (request.getAttribute("errorMessage") != null) { %>
+                <div class="error-message">
+                    <%= request.getAttribute("errorMessage") %>
+                </div>
+            <% } %>
       <div class="form-group">
         <label for="username">Username:</label>
         <input type="email" name="username" value="" required>

@@ -23,11 +23,17 @@
       max-width: 400px; /* Adjust the value as needed */
       width: 100%;
     }
-
+	
     .login-form h2 {
       font-size: 30px;
       margin-bottom: 20px;
       text-align: center;
+    }
+    .error-message {
+        color: red;
+        font-size: 18px;
+        margin-bottom: 20px;
+        text-align: center; /* Center-align the error message */
     }
 
     .form-group {
