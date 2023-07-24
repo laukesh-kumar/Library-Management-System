@@ -4,12 +4,14 @@ import jakarta.servlet.http.HttpServletRequest;
 
 public class RegisterDTO {
 	private String name;
-	private String username;
+	private String username;	
+	private String phone;
 	private String password;
 	private String confirmPassword;
 	private String gender;
 	private String city;
 	private String branch;
+	private String colname;
 	public RegisterDTO() {
 		super();
 		
@@ -17,11 +19,13 @@ public class RegisterDTO {
 	public RegisterDTO(HttpServletRequest request) {
 		 name =request.getParameter("name");
 		 username = request.getParameter("username");
+		 phone = request.getParameter("phone");
 		 password = request.getParameter("password");
 		 confirmPassword = request.getParameter("confirmPassword");
 		 gender = request.getParameter("gender");
 		 city = request.getParameter("city");
 		 branch = request.getParameter("branch");
+		 colname = request.getParameter("colname");
 	}
 	
 	public String getName() {
@@ -35,6 +39,12 @@ public class RegisterDTO {
 	}
 	public void setUsername(String username) {
 		this.username = username;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 	public String getPassword() {
 		return password;
@@ -66,10 +76,18 @@ public class RegisterDTO {
 	public void setBranch(String branch) {
 		this.branch = branch;
 	}
+	
+	public String getColname() {
+		return colname;
+	}
+	public void setColname(String colname) {
+		this.colname = colname;
+	}
 	@Override
 	public String toString() {
-		return "RegisterDTO [name=" + name + ", username=" + username + ", password=" + password + ", confirmPassword="
-				+ confirmPassword + ", gender=" + gender + ", city=" + city + ", branch=" + branch + "]";
+		return "RegisterDTO [name=" + name + ", username=" + username + ", phone=" + phone + ", password=" + password
+				+ ", confirmPassword=" + confirmPassword + ", gender=" + gender + ", city=" + city + ", branch="
+				+ branch + ", colname=" + colname + "]";
 	}
 	
 }

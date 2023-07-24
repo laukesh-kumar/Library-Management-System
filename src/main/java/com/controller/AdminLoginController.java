@@ -10,11 +10,11 @@ import java.io.IOException;
 import com.dao.LoginDAO;
 import com.dto.LoginDTO;
 
-public class LoginController extends HttpServlet {
+public class AdminLoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     
-    public LoginController() {
+    public AdminLoginController() {
         super();
     }
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -25,15 +25,15 @@ public class LoginController extends HttpServlet {
 		doGet(request, response);
 		
 		LoginDTO loginDTO = new LoginDTO(request);
-		boolean resultUser = LoginDAO.validateUser(loginDTO);
-		if(resultUser) {
+		boolean resultAdmin = LoginDAO.validateAdmin(loginDTO);
+		 if(resultAdmin) {
 			request.setAttribute("loginDTO", loginDTO);
-			RequestDispatcher rd = request.getRequestDispatcher("user_home.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("admin_home.jsp");
 			rd.forward(request, response);
 		}
 		else {
 			request.setAttribute("errorMessage", "Invalid UserName and Password");
-			RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("admin_login.jsp");
 			rd.forward(request, response);
 		}		
 	}

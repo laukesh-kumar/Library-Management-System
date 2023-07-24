@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/login.css">
-  <title>User Login - Library Management System</title>
+  <title>Admin Login - Library Management System</title>
   <style type="text/css">
   
   .error-message {
@@ -25,12 +25,12 @@
 		<div>
 			<a href="index.jsp" class="btn"><strong>Home</strong></a> 
 			<a href="register_options.jsp" class="btn"><strong>New Registration</strong></a>
-			<a href="admin_login.jsp" class="btn"><strong>Admin Login</strong></a>
+			<a href="login.jsp" class="btn"><strong>User Login</strong></a>
 		</div>
 	</header>
   <div class="login-container">
-    <form class="login-form" action="LoginController" method="POST">
-      <h2>User Login</h2>
+    <form class="login-form" action="AdminLoginController" method="POST">
+      <h2>Admin Login</h2>
       <%-- Check for the presence of the error message and display it --%>
             <% if (request.getAttribute("errorMessage") != null) { %>
                 <div class="error-message">

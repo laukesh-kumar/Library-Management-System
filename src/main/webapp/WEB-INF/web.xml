@@ -38,4 +38,14 @@
     <servlet-name>LoginDAO</servlet-name>
     <url-pattern>/LoginDAO</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>AdminLoginController</display-name>
+    <servlet-name>AdminLoginController</servlet-name>
+    <servlet-class>com.controller.AdminLoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminLoginController</servlet-name>
+    <url-pattern>/AdminLoginController</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -29,12 +29,7 @@
       margin-bottom: 20px;
       text-align: center;
     }
-    .error-message {
-        color: red;
-        font-size: 18px;
-        margin-bottom: 20px;
-        text-align: center; /* Center-align the error message */
-    }
+    
 
     .form-group {
       margin-bottom: 20px;

@@ -6,10 +6,11 @@
   <meta name="viewport" content="wnameth=device-wnameth, initial-scale=1.0">
   <link rel="stylesheet" href="./css/register.css">
  
-  <title>User Registration - Library Management System</title>
+  <title>Admin Registration - Library Management System</title>
   <style type="text/css">
   
-  .form-group input[type="email"] {
+  .form-group input[type="email"],
+  .form-group input[type="number"]{
 	    	width: 100%;
 	    	padding: 12px;
 	    	border: 1px solid #ccc;
@@ -50,7 +51,7 @@
 	</header>
 	<div class="register-container">
   <form class="register-form" action="RegisterController" method="POST">
-    <h2>User Registration</h2>
+    <h2>Admin Registration</h2>
     <div class="form-group">
       <label for="fullname">Full Name:</label>
       <input type="text" name="name" value="" required>
@@ -58,6 +59,10 @@
     <div class="form-group">
       <label for="username">Email:</label>
       <input type="email" name="username" value="" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone No:</label>
+      <input type="number" name="phone" value="" required>
     </div>
     <div class="form-group">
       <label for="password">Password:</label>
@@ -81,8 +86,8 @@
       <input type="text" name="city" value="" required>
     </div>
     <div class="form-group">
-      <label for="branch">Branch:</label>
-      <input type="text" name="branch" value="" required>
+      <label for="college name">College Name:</label>
+      <input type="text" name="colname" value="" required>
     </div>
     <div class="form-group">
       <button type="submit" class="section-button">Register</button>

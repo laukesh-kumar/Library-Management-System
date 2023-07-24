@@ -23,13 +23,19 @@ public class RegisterController extends HttpServlet {
 		doGet(request, response);
 	 	//PrintWriter out = response.getWriter();		
 		RegisterDTO registerDTO = new RegisterDTO(request);
-		boolean result= RegisterDAO.insertUser(registerDTO);
-		
-		if(result) {
+		boolean userResult= RegisterDAO.insertUser(registerDTO);
+		boolean adminResult = RegisterDAO.insertAdmin(registerDTO);
+		if(userResult) {
 			request.setAttribute("registerDTO", registerDTO);
-			RequestDispatcher rd = request.getRequestDispatcher("registrationSuccess.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("registration_success.jsp");
 			rd.forward(request, response);
-		}else {
+		}
+		else if(adminResult){
+			request.setAttribute("adminRegistration", "registerd");
+			RequestDispatcher rd = request.getRequestDispatcher("registration_success.jsp");
+			rd.forward(request, response);
+		}
+		else {
 			RequestDispatcher rd = request.getRequestDispatcher("Test.jsp");
 			rd.forward(request, response);
 		}

@@ -12,8 +12,8 @@
 	<header>
 		<h1>Library Management System</h1>
 		<div>
-			<a href="login.jsp" class="btn"><strong>Login</strong></a> 
-			<a href="register.jsp" class="btn"><strong>Register</strong></a>
+			<a href="login_options.jsp" class="btn"><strong>Login</strong></a> 
+			<a href="register_options.jsp" class="btn"><strong>Register</strong></a>
 		</div>
 	</header>
 

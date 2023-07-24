@@ -36,4 +36,34 @@ public class RegisterDAO {
 		}
 		return flag;
 	}
+	public static boolean insertAdmin(RegisterDTO rg) {
+		boolean flag=false;
+		try {
+			Connection con1 = ConnectionProvider1.createConnection1();
+			String query ="INSERT INTO admin(fullname, username,phone, passwords, gender, city, college_name) VALUES (?, ?, ?, ?, ?, ?, ?)";
+			PreparedStatement pstmt = con1.prepareStatement(query);
+			
+			if(rg.getPassword().equals(rg.getConfirmPassword())) {
+				pstmt.setString(1, rg.getName());
+				pstmt.setString(2, rg.getUsername());
+				pstmt.setString(3, rg.getPhone());
+				pstmt.setString(4, rg.getPassword());
+				pstmt.setString(5, rg.getGender());
+				pstmt.setString(6, rg.getCity());
+				pstmt.setString(7, rg.getColname());
+				
+				pstmt.executeUpdate();
+				flag=true;
+			}
+			else {
+				flag=false;
+			}
+			
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return flag;
+	}
 }
