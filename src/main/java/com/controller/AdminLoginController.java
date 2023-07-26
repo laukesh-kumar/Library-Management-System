@@ -28,7 +28,7 @@ public class AdminLoginController extends HttpServlet {
 		boolean resultAdmin = LoginDAO.validateAdmin(loginDTO);
 		 if(resultAdmin) {
 			request.setAttribute("loginDTO", loginDTO);
-			RequestDispatcher rd = request.getRequestDispatcher("admin_home.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("admin_dashboard.jsp");
 			rd.forward(request, response);
 		}
 		else {

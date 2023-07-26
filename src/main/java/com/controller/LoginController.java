@@ -28,7 +28,7 @@ public class LoginController extends HttpServlet {
 		boolean resultUser = LoginDAO.validateUser(loginDTO);
 		if(resultUser) {
 			request.setAttribute("loginDTO", loginDTO);
-			RequestDispatcher rd = request.getRequestDispatcher("user_home.jsp");
+			RequestDispatcher rd = request.getRequestDispatcher("user_dashboard.jsp");
 			rd.forward(request, response);
 		}
 		else {

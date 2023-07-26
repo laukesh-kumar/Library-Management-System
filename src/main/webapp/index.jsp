@@ -28,14 +28,14 @@
       <div class="hero-content">
         <h2>Manage Your Library Efficiently</h2>
         <p>Access a wide range of features for book cataloging, member management, borrowing, and more.</p>
-        <a href="login.jsp" class="btn">Get Started</a>
+        <a href="login_options.jsp" class="btn">Get Started</a>
       </div>
     </section>
   </main>
 
   <jsp:include page="footer.jsp" />
 
-  <script >// script.js
+  <script >
   const slides = document.querySelectorAll('.slide');
   let currentSlide = 0;
 
