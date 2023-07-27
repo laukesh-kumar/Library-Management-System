@@ -13,6 +13,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 98%;
 }
 
 header h1 {
@@ -52,7 +56,7 @@ footer {
   position: relative;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 98.5%;
 }
 </style>
 <title>Insert title here</title>

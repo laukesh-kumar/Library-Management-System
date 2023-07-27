@@ -11,7 +11,7 @@
 
     <div class="container">
         <h2>Add New Book</h2>
-        <form id="addBookForm" action="add_book_action.jsp" method="post">
+        <form id="addBookForm" action="AdminBooksController" method="POST">
             <!-- Include the book form fields -->
             <%@ include file="book_form_fields.jsp" %>
             <div class="form-group">

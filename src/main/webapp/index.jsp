@@ -95,6 +95,17 @@ main {
 .btn:hover {
   background-color: rgb(0, 125, 125);
 }
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 98.5%;
+}
   </style>
 </head>
 <body>
@@ -122,7 +133,10 @@ main {
     </section>
   </main>
 
-  <jsp:include page="footer.jsp" />
+  <%-- <jsp:include page="footer.jsp" /> --%>
+  <footer>
+    <p>&copy; 2023 Laukesh Library</p>
+  </footer>
 
   <script >
   const slides = document.querySelectorAll('.slide');

@@ -5,9 +5,6 @@
     <meta charset="ISO-8859-1">
     <title>Books - Library Management System</title>
     <link rel="stylesheet" href="./css/book.css">
-    <style type="text/css">
-	
-</style>
 </head>
 <body>
     <%@ include file="admin_header.jsp" %>
@@ -31,8 +28,8 @@
                 <p class="book-info">Genre: Fiction</p>
                 <p class="book-info">Publication Date: 2023-07-01</p>
                 <p class="book-info">Available Copies: 5</p>
-                <a href="edit_form.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
-                <a href="delete_form.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
+                <a href="edit_form_book.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
+                <a href="delete_book.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
             </div>
             <div class="book" id="book1">
               <!--   <img src="./images/user_dashboard.jpg" alt="Book Cover" class="book-cover"> -->
@@ -42,8 +39,8 @@
                 <p class="book-info">Genre: Fiction</p>
                 <p class="book-info">Publication Date: 2023-07-01</p>
                 <p class="book-info">Available Copies: 5</p>
-                <a href="edit_form.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
-                <a href="delete_form.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
+                <a href="edit_form_book.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
+                <a href="delete_book.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
             </div>
             <div class="book" id="book1">
                 <!-- <img src="./images/user_dashboard.jpg" alt="Book Cover" class="book-cover"> -->
@@ -53,8 +50,8 @@
                 <p class="book-info">Genre: Fiction</p>
                 <p class="book-info">Publication Date: 2023-07-01</p>
                 <p class="book-info">Available Copies: 5</p>
-                <a href="edit_form.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
-                <a href="delete_form.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
+                <a href="edit_form_book.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
+                <a href="delete_book.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
             </div>
             <div class="book" id="book1">
               <!--   <img src="./images/user_dashboard.jpg" alt="Book Cover" class="book-cover"> -->
@@ -64,8 +61,8 @@
                 <p class="book-info">Genre: Fiction</p>
                 <p class="book-info">Publication Date: 2023-07-01</p>
                 <p class="book-info">Available Copies: 5</p>
-                <a href="edit_form.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
-                <a href="delete_form.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
+                <a href="edit_form_book.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
+                <a href="delete_book.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
             </div><div class="book" id="book1">
               <!--   <img src="./images/user_dashboard.jpg" alt="Book Cover" class="book-cover"> -->
                 <h3 class="book-title">Book Title 1</h3>
@@ -74,8 +71,8 @@
                 <p class="book-info">Genre: Fiction</p>
                 <p class="book-info">Publication Date: 2023-07-01</p>
                 <p class="book-info">Available Copies: 5</p>
-                <a href="edit_form.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
-                <a href="delete_form.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
+                <a href="edit_form_book.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
+                <a href="delete_book.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
             </div><div class="book" id="book1">
               <!--   <img src="./images/user_dashboard.jpg" alt="Book Cover" class="book-cover"> -->
                 <h3 class="book-title">Book Title 1</h3>
@@ -84,8 +81,8 @@
                 <p class="book-info">Genre: Fiction</p>
                 <p class="book-info">Publication Date: 2023-07-01</p>
                 <p class="book-info">Available Copies: 5</p>
-                <a href="edit_form.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
-                <a href="delete_form.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
+                <a href="edit_form_book.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
+                <a href="delete_book.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
             </div>
           
             <!-- Add more book elements here -->

@@ -12,27 +12,27 @@
 	    <!-- <img src="./images/user_dashboard.jpg" alt="Book Cover" class="book-cover"> -->
 	    <h3 class="book-title">
 	        <label for="title">Book Title:</label>
-	        <input type="text" id="title" name="title" required>
+	        <input type="text"  name="title"  val="" required>
 	    </h3>
 	    <p class="book-info">
 	        <label for="author">Author:</label>
-	        <input type="text" id="author" name="author" required>
+	        <input type="text" name="author" val="" required>
 	    </p>
 	    <p class="book-info">
 	        <label for="isbn">ISBN:</label>
-	        <input type="text" id="isbn" name="isbn" required>
+	        <input type="text"  name="isbn" val="" required>
 	    </p>
 	    <p class="book-info">
 	        <label for="genre">Genre:</label>
-	        <input type="text" id="genre" name="genre" required>
+	        <input type="text"  name="genre" val="" required>
 	    </p>
 	    <p class="book-info">
 	        <label for="publicationDate">Publication Date:</label>
-	        <input type="date" id="publicationDate" name="publicationDate" required>
+	        <input type="date"  name="publicationDate" val="" required>
 	    </p>
 	    <p class="book-info">
 	        <label for="availableCopies">Available Copies:</label>
-	        <input type="number" id="availableCopies" name="availableCopies" required>
+	        <input type="number" name="availableCopies" val="" required>
 	    </p>
   </div>
 	
