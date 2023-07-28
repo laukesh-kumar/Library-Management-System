@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import com.dao.AdminBookDAO;
 import com.dto.AdminBookDTO;
@@ -24,7 +25,11 @@ public class AdminBooksController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 		AdminBookDTO adminBookDTO = new AdminBookDTO(request);
-		boolean resultAddNew=AdminBookDAO.insertFormData(adminBookDTO);
+		boolean resultAddNew=AdminBookDAO.insertBookData(adminBookDTO);
+		ArrayList<AdminBookDTO> bookList = (ArrayList<AdminBookDTO>) AdminBookDAO.displayBookData();
+		request.setAttribute("bookList", bookList);
+		RequestDispatcher rd1 = request.getRequestDispatcher("book.jsp");
+		rd1.forward(request, response);
 		if(resultAddNew) {
 			request.setAttribute("adminBookDTO", adminBookDTO);
 			RequestDispatcher rd = request.getRequestDispatcher("book.jsp");

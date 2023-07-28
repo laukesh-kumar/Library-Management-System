@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
+<%@ page import="com.dto.AdminBookDTO" %>
+<%@ page import ="java.util.ArrayList" %>
 <html>
 <head>
     <meta charset="ISO-8859-1">
@@ -16,80 +18,31 @@
             <button class="search-button">Search</button>
         </div>
         <div class="book-actions">
-            <a href="add_new_book_form.jsp" class="btn btn-add"><strong>Add New Book</strong></a>
+			<form action="AdminBooksController" method="POST">
+				<button type="submit" class="btn"><strong>Show books</strong></button>
+			</form>
+			<a href="add_new_book_form.jsp" class="btn btn-add"><strong>Add New Book</strong></a>
             <%if(request.getAttribute("adminBookDTO") != null){ %>
         <h2 style = "color: green"><center>New book Added Successfully....</center></h2>
         <%} %>
         </div>
         <div class="book-list">
-            <!-- Sample book elements - Replace this with dynamic data from the database -->
-            <div class="book" id="book1">
-              <!--   <img src="./images/user_dashboard.jpg" alt="Book Cover" class="book-cover"> -->
-                <h3 class="book-title">Book Title 1</h3>
-                <p class="book-info">Author: Author Name 1</p>
-                <p class="book-info">ISBN: 9781234567890</p>
-                <p class="book-info">Genre: Fiction</p>
-                <p class="book-info">Publication Date: 2023-07-01</p>
-                <p class="book-info">Available Copies: 5</p>
-                <a href="edit_form_book.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
-                <a href="delete_book.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
-            </div>
-            <div class="book" id="book1">
-              <!--   <img src="./images/user_dashboard.jpg" alt="Book Cover" class="book-cover"> -->
-                <h3 class="book-title">Book Title 1</h3>
-                <p class="book-info">Author: Author Name 1</p>
-                <p class="book-info">ISBN: 9781234567890</p>
-                <p class="book-info">Genre: Fiction</p>
-                <p class="book-info">Publication Date: 2023-07-01</p>
-                <p class="book-info">Available Copies: 5</p>
-                <a href="edit_form_book.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
-                <a href="delete_book.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
-            </div>
+            <% if (request.getAttribute("bookList") != null) {
+                ArrayList<AdminBookDTO> bookList = (ArrayList<AdminBookDTO>) request.getAttribute("bookList");
+                for (AdminBookDTO book : bookList) {
+            %>
             <div class="book" id="book1">
                 <!-- <img src="./images/user_dashboard.jpg" alt="Book Cover" class="book-cover"> -->
-                <h3 class="book-title">Book Title 1</h3>
-                <p class="book-info">Author: Author Name 1</p>
-                <p class="book-info">ISBN: 9781234567890</p>
-                <p class="book-info">Genre: Fiction</p>
-                <p class="book-info">Publication Date: 2023-07-01</p>
-                <p class="book-info">Available Copies: 5</p>
+                <h3 class="book-title"><%= book.getTitle() %></h3>
+                <p class="book-info">Author: <%= book.getAuthor() %></p>
+                <p class="book-info">ISBN: <%= book.getIsbn() %></p>
+                <p class="book-info">Genre: <%= book.getGenre() %></p>
+                <p class="book-info">Publication Date: <%= book.getPublicationDate() %></p>
+                <p class="book-info">Available Copies: <%= book.getAvailableCopies() %></p>
                 <a href="edit_form_book.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
                 <a href="delete_book.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
             </div>
-            <div class="book" id="book1">
-              <!--   <img src="./images/user_dashboard.jpg" alt="Book Cover" class="book-cover"> -->
-                <h3 class="book-title">Book Title 1</h3>
-                <p class="book-info">Author: Author Name 1</p>
-                <p class="book-info">ISBN: 9781234567890</p>
-                <p class="book-info">Genre: Fiction</p>
-                <p class="book-info">Publication Date: 2023-07-01</p>
-                <p class="book-info">Available Copies: 5</p>
-                <a href="edit_form_book.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
-                <a href="delete_book.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
-            </div><div class="book" id="book1">
-              <!--   <img src="./images/user_dashboard.jpg" alt="Book Cover" class="book-cover"> -->
-                <h3 class="book-title">Book Title 1</h3>
-                <p class="book-info">Author: Author Name 1</p>
-                <p class="book-info">ISBN: 9781234567890</p>
-                <p class="book-info">Genre: Fiction</p>
-                <p class="book-info">Publication Date: 2023-07-01</p>
-                <p class="book-info">Available Copies: 5</p>
-                <a href="edit_form_book.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
-                <a href="delete_book.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
-            </div><div class="book" id="book1">
-              <!--   <img src="./images/user_dashboard.jpg" alt="Book Cover" class="book-cover"> -->
-                <h3 class="book-title">Book Title 1</h3>
-                <p class="book-info">Author: Author Name 1</p>
-                <p class="book-info">ISBN: 9781234567890</p>
-                <p class="book-info">Genre: Fiction</p>
-                <p class="book-info">Publication Date: 2023-07-01</p>
-                <p class="book-info">Available Copies: 5</p>
-                <a href="edit_form_book.jsp" class="btn-e btn-edit"><strong>Edit</strong></a>
-                <a href="delete_book.jsp" class="btn-e btn-delete"><strong>Delete</strong></a>
-            </div>
-          
-            <!-- Add more book elements here -->
-
+            <% } } %>
         </div>
         
     </div>
