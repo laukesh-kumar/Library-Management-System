@@ -9,7 +9,6 @@
 </head>
 <body>
     <%@ include file="admin_header.jsp" %>
-
      <div class="dashboard-content">
         <div class="dashboard-card">
             <h1>Welcome Admin!</h1>
