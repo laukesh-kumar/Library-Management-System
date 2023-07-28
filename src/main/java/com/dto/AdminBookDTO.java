@@ -4,6 +4,7 @@ import jakarta.servlet.http.HttpServletRequest;
 
 public class AdminBookDTO {
 	private int id;
+	private int bookId;
 	private String title;
 	private String author;
 	private String isbn;
@@ -21,12 +22,22 @@ public class AdminBookDTO {
 		genre = request.getParameter("genre");
 		publicationDate = request.getParameter("publicationDate");
 		availableCopies = request.getParameter("availableCopies");
+		String action = request.getParameter("action");
+	    if (action != null && action.equals("delete")) {
+	        bookId = Integer.parseInt(request.getParameter("bookId"));
+	    }
 	}
 	public int getId() {
 		return id;
 	}
 	public void setId(int id) {
 		this.id = id;
+	}
+	public int getBookId() {
+		return bookId;
+	}
+	public void setBookId(int bookId) {
+		this.bookId = bookId;
 	}
 	public String getTitle() {
 		return title;
@@ -66,8 +77,9 @@ public class AdminBookDTO {
 	}
 	@Override
 	public String toString() {
-		return "AdminBookDTO [id=" + id + ", title=" + title + ", author=" + author + ", isbn=" + isbn + ", genre="
-				+ genre + ", publicationDate=" + publicationDate + ", availableCopies=" + availableCopies + "]";
+		return "AdminBookDTO [id=" + id + ", bookId=" + bookId + ", title=" + title + ", author=" + author + ", isbn="
+				+ isbn + ", genre=" + genre + ", publicationDate=" + publicationDate + ", availableCopies="
+				+ availableCopies + "]";
 	}
 	
 }

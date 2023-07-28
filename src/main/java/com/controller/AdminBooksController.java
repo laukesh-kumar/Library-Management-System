@@ -27,11 +27,9 @@ public class AdminBooksController extends HttpServlet {
 		AdminBookDTO adminBookDTO = new AdminBookDTO(request);
 		boolean resultAddNew=AdminBookDAO.insertBookData(adminBookDTO);
 		//delete
-		String action = request.getParameter("action");
-	    if (action != null && action.equals("delete")) {
-	        String bookId = request.getParameter("bookId");
-	        if (bookId != null) {
-	            boolean result = AdminBookDAO.deleteBookById(bookId);
+		
+	    
+	            boolean result = AdminBookDAO.deleteBookById(adminBookDTO.getBookId());
 	            if (result) {
 	                // Book deleted successfully, update bookList and forward back to book.jsp
 	            	ArrayList<AdminBookDTO> bookList = (ArrayList<AdminBookDTO>) AdminBookDAO.displayBookData();
@@ -40,16 +38,15 @@ public class AdminBooksController extends HttpServlet {
 	        		rd1.forward(request, response);
 	                return;
 	            }
-	        }
-	    }
+	  
 		
-		
+		//no any action then it will execute
 		ArrayList<AdminBookDTO> bookList = (ArrayList<AdminBookDTO>) AdminBookDAO.displayBookData();
 		request.setAttribute("bookList", bookList);
 		RequestDispatcher rd1 = request.getRequestDispatcher("book.jsp");
 		rd1.forward(request, response);
 		if(resultAddNew) {
-			request.setAttribute("adminBookDTO", adminBookDTO);
+			request.setAttribute("success", "success");
 			RequestDispatcher rd = request.getRequestDispatcher("book.jsp");
 			rd.forward(request, response);
 		}

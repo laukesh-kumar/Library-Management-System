@@ -53,12 +53,12 @@ public class AdminBookDAO {
         return bookList;
     }
 
-    public static boolean deleteBookById(String bookId) {
+    public static boolean deleteBookById(int bookId) {
         boolean flag = false;
         try {
             String query = "DELETE FROM admin_book WHERE id = ?";
             PreparedStatement pstmt = con.prepareStatement(query);
-            pstmt.setString(1, bookId);
+            pstmt.setInt(1, bookId);
             pstmt.executeUpdate();
             flag = true;
         } catch (Exception e) {

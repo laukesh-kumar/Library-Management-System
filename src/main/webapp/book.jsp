@@ -13,7 +13,17 @@
 
     <div class="container">
         <h2 class="book-heading">All Books</h2>
-        <div class="search-bar">
+		<%
+		if(request.getAttribute("success") != null) {
+		%>
+		<h2 style="color: green">
+			<center><%= request.getAttribute("success") %></center>
+		</h2>
+		<%
+		}
+		%>
+
+		<div class="search-bar">
             <input type="text" placeholder="Search by title, author, genre..." class="search-input">
             <button class="search-button">Search</button>
         </div>
@@ -22,9 +32,6 @@
 				<button type="submit" class="btn"><strong>Show books</strong></button>
 			</form>
 			<a href="add_new_book_form.jsp" class="btn btn-add"><strong>Add New Book</strong></a>
-            <%if(request.getAttribute("adminBookDTO") != null){ %>
-        <h2 style = "color: green"><center>New book Added Successfully....</center></h2>
-        <%} %>
         </div>
         <div class="book-list">
             <% if (request.getAttribute("bookList") != null) {
