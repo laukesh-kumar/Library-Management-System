@@ -41,7 +41,10 @@ body {
     background-color: #f4f4f4;
     cursor: pointer;
 }
-
+.book-actions h4{
+	text-align: center;
+	color: springgreen;
+}
 .book-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);

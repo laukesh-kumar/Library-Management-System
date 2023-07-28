@@ -26,7 +26,8 @@ public class AdminBooksController extends HttpServlet {
 		AdminBookDTO adminBookDTO = new AdminBookDTO(request);
 		boolean resultAddNew=AdminBookDAO.insertFormData(adminBookDTO);
 		if(resultAddNew) {
-			RequestDispatcher rd = request.getRequestDispatcher("admin_login.jsp");
+			request.setAttribute("adminBookDTO", adminBookDTO);
+			RequestDispatcher rd = request.getRequestDispatcher("book.jsp");
 			rd.forward(request, response);
 		}
 		else {

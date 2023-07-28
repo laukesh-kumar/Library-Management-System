@@ -17,6 +17,9 @@
         </div>
         <div class="book-actions">
             <a href="add_new_book_form.jsp" class="btn btn-add"><strong>Add New Book</strong></a>
+            <%if(request.getAttribute("adminBookDTO") != null){ %>
+        <h2 style = "color: green"><center>New book Added Successfully....</center></h2>
+        <%} %>
         </div>
         <div class="book-list">
             <!-- Sample book elements - Replace this with dynamic data from the database -->

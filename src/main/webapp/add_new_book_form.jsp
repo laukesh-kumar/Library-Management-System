@@ -1,3 +1,4 @@
+<%@page import="com.dto.AdminBookDTO"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
@@ -11,6 +12,7 @@
 
     <div class="container">
         <h2>Add New Book</h2>
+        
         <form id="addBookForm" action="AdminBooksController" method="POST">
             <!-- Include the book form fields -->
             <%@ include file="book_form_fields.jsp" %>
