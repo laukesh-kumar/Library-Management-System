@@ -38,18 +38,33 @@ public class AdminBookDAO {
             ResultSet set = pstmt.executeQuery();
             while (set.next()) {
                 AdminBookDTO book = new AdminBookDTO();
-                book.setTitle(set.getString(1));
-                book.setAuthor(set.getString(2));
-                book.setIsbn(set.getString(3));
-                book.setGenre(set.getString(4));
-                book.setPublicationDate(set.getString(5));
-                book.setAvailableCopies(set.getString(6));
+                book.setId(set.getInt(1));
+                book.setTitle(set.getString(2));
+                book.setAuthor(set.getString(3));
+                book.setIsbn(set.getString(4));
+                book.setGenre(set.getString(5));
+                book.setPublicationDate(set.getString(6));
+                book.setAvailableCopies(set.getString(7));
                 bookList.add(book);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
         return bookList;
+    }
+
+    public static boolean deleteBookById(String bookId) {
+        boolean flag = false;
+        try {
+            String query = "DELETE FROM admin_book WHERE id = ?";
+            PreparedStatement pstmt = con.prepareStatement(query);
+            pstmt.setString(1, bookId);
+            pstmt.executeUpdate();
+            flag = true;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return flag;
     }
 	
 }

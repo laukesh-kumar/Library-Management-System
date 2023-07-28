@@ -3,6 +3,7 @@ package com.dto;
 import jakarta.servlet.http.HttpServletRequest;
 
 public class AdminBookDTO {
+	private int id;
 	private String title;
 	private String author;
 	private String isbn;
@@ -20,6 +21,12 @@ public class AdminBookDTO {
 		genre = request.getParameter("genre");
 		publicationDate = request.getParameter("publicationDate");
 		availableCopies = request.getParameter("availableCopies");
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	public String getTitle() {
 		return title;
@@ -59,8 +66,8 @@ public class AdminBookDTO {
 	}
 	@Override
 	public String toString() {
-		return "AdminBookDTO [title=" + title + ", author=" + author + ", isbn=" + isbn + ", genre=" + genre
-				+ ", publicationDate=" + publicationDate + ", availableCopies=" + availableCopies + "]";
+		return "AdminBookDTO [id=" + id + ", title=" + title + ", author=" + author + ", isbn=" + isbn + ", genre="
+				+ genre + ", publicationDate=" + publicationDate + ", availableCopies=" + availableCopies + "]";
 	}
 	
 }

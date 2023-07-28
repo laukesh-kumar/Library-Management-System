@@ -26,6 +26,24 @@ public class AdminBooksController extends HttpServlet {
 		doGet(request, response);
 		AdminBookDTO adminBookDTO = new AdminBookDTO(request);
 		boolean resultAddNew=AdminBookDAO.insertBookData(adminBookDTO);
+		//delete
+		String action = request.getParameter("action");
+	    if (action != null && action.equals("delete")) {
+	        String bookId = request.getParameter("bookId");
+	        if (bookId != null) {
+	            boolean result = AdminBookDAO.deleteBookById(bookId);
+	            if (result) {
+	                // Book deleted successfully, update bookList and forward back to book.jsp
+	            	ArrayList<AdminBookDTO> bookList = (ArrayList<AdminBookDTO>) AdminBookDAO.displayBookData();
+	        		request.setAttribute("bookList", bookList);
+	        		RequestDispatcher rd1 = request.getRequestDispatcher("book.jsp");
+	        		rd1.forward(request, response);
+	                return;
+	            }
+	        }
+	    }
+		
+		
 		ArrayList<AdminBookDTO> bookList = (ArrayList<AdminBookDTO>) AdminBookDAO.displayBookData();
 		request.setAttribute("bookList", bookList);
 		RequestDispatcher rd1 = request.getRequestDispatcher("book.jsp");
